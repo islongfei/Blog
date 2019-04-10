@@ -4,4 +4,4 @@
 ---
 数据库相关
 ---
-* [MySQl中的锁](https://github.com/islongfei/Blog/issues/1)
+* [MySQL中的锁](https://github.com/islongfei/Blog/issues/1)
