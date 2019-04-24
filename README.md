@@ -9,4 +9,4 @@
 ---
 数据结构
 ---
-* [数组杂谈](https://github.com/islongfei/Blog/issues/1)
+* [数组杂谈](https://github.com/islongfei/Blog/issues/3)
