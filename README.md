@@ -4,9 +4,8 @@
 ---
 数据库
 ---
-* [MySQL中的锁](https://github.com/islongfei/Blog/issues/1)
-* [一条SQL查询语句是如何执行的](https://github.com/islongfei/Blog/issues/2)
+* [MySQL中的锁](https://github.com/islongfei/Blog/blob/master/mysql/%E9%94%81.md)
 ---
 数据结构
 ---
-* [数组杂谈](https://github.com/islongfei/Blog/issues/3)
+* [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
