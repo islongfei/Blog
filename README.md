@@ -22,4 +22,4 @@
 ---
 多线程
 ---
-[死锁排查](https://github.com/islongfei/Blog/tree/master/business-skills)
+* [死锁排查](https://github.com/islongfei/Blog/tree/master/business-skills)
