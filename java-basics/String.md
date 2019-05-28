@@ -41,7 +41,7 @@ split有两种情况不会使用正则表达式：
 而正则表达式的性能是非常不稳定的，使用不恰当会引起回溯问题，很可能导致 CPU 居高不下。 
 所以应该慎重使用 Split() 方法，可以用java.util.StringTokener与String.indexOf() 方法代替 Split() 方法完成字符串的分割。  
 
-性能方面：Vector & indexOf() >java.util.StringTokener()>Split() [性能比较]（https://ben-sin.iteye.com/blog/659611）  
+性能方面：Vector & indexOf() >java.util.StringTokener()>Split() [性能比较](https://ben-sin.iteye.com/blog/659611)
 
 如果实在无法满足需求，你就在使用 Split() 方法时，对回溯问题加以重视就可以了。
 
