@@ -21,6 +21,6 @@
 
 * [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
 
-### 多线程
+### Jav
 
 * [死锁排查](https://github.com/islongfei/Blog/tree/master/business-skills)
