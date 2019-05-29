@@ -26,7 +26,7 @@
 
 * [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
 
-### Java
+### Java基础
 
 * [死锁排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E6%AD%BB%E9%94%81%E6%8E%92%E6%9F%A5.md)
 * [String优化](https://github.com/islongfei/Blog/blob/master/java-basics/String.md)
