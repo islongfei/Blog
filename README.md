@@ -21,6 +21,3 @@
 * [String优化](https://github.com/islongfei/Blog/blob/master/java-basics/String.md)
 * [避免正则回溯](https://github.com/islongfei/Blog/blob/master/java-basics/%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E5%9B%9E%E6%BA%AF.md)
 
-
-
-<center> 此项目为个人博客，记录知识点滴 </center >
