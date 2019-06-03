@@ -85,9 +85,12 @@ Follower 和 Observer 都只能提供读服务。Follower 和 Observer 唯一的
 ### Leader选举
 当 Leader 服务器出现网络中断、崩溃退出与重启等异常情况时，`ZAB` 协议就会进人恢复模式并选举产生新的Leader服务器。这个过程大致是这样的：  
 
-1、`Leader election（选举阶段）`：节点在一开始都处于选举阶段，只要有一个节点得到超半数节点的票数，它就可以当选准 leader。
-2、`Discovery（发现阶段）`：在这个阶段，followers 跟准 leader 进行通信，同步 followers 最近接收的事务提议。
-3、`Synchronization（同步阶段）`:同步阶段主要是利用 leader 前一阶段获得的最新提议历史，同步集群中所有的副本。同步完成之后 准 leader 才会成为真正的 leader。
+1、`Leader election（选举阶段）`：节点在一开始都处于选举阶段，只要有一个节点得到超半数节点的票数，它就可以当选准 leader。  
+
+2、`Discovery（发现阶段）`：在这个阶段，followers 跟准 leader 进行通信，同步 followers 最近接收的事务提议。  
+
+3、`Synchronization（同步阶段）`:同步阶段主要是利用 leader 前一阶段获得的最新提议历史，同步集群中所有的副本。同步完成之后 准 leader 才会成为真正的 leader。  
+
 4、`Broadcast（广播阶段）`: 到了这个阶段，Zookeeper 集群才能正式对外提供事务服务，并且 leader 可以进行消息广播。同时如果有新的节点加入，还需要对新节点进行同步。
 
 ### ZooKeeper分布式锁
