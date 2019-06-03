@@ -29,3 +29,4 @@
 * [避免正则回溯](https://github.com/islongfei/Blog/blob/master/java-basics/%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E5%9B%9E%E6%BA%AF.md)
 
 ### 常用框架
+* [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
