@@ -40,7 +40,8 @@ Session 指的是 ZooKeeper 服务器与客户端会话，客户端与服务端�
 #### Znode
 在Zookeeper中，“节点"分为两类，第一类同样是指构成集群的机器，我们称之为`机器节点`；第二类则是指数据模型中的`数据单元`，我们称之为数据节点ZNode。ZNode也分为两类：`持久节点`和`临时节点` 
 
-Zookeeper将所有数据存储在内存中，数据模型是一棵树（Znode Tree)，由斜杠（/）的进行分割的路径，就是一个Znode，例如/foo/path1。每个上都会保存自己的数据内容，同时还会保存一系列属性信息。  
+Zookeeper将所有数据存储在内存中，数据模型是一棵树（Znode Tree)，由斜杠（/）的进行分割的路径，就是一个Znode，例如/app1/p_1。每个上都会保存自己的数据内容，同时还会保存一系列属性信息。Znode Tree结构模型如下所示：  
+![image](https://github.com/islongfei/Blog/blob/master/images/ZooKeeper%E8%8A%82%E7%82%B9%E6%A8%A1%E5%9E%8B.jpg)
 
 #### 版本
 Zookeeper 的每个 ZNode 上都会存储数据，对应于每个ZNode，Zookeeper 都会为其维护一个叫作 Stat 的数据结构，Stat 中记录了这个 ZNode 的三个数据版本，分别是`version`（当前ZNode的版本）、`cversion`（当前ZNode子节点的版本）和 `aversion`（当前ZNode的ACL版本）。  
@@ -52,22 +53,25 @@ Watcher（事件监听器），Zookeeper允许用户在指定节点上注册一�
 ACL（AccessControlLists）是Zookeeper的权限控制策略，其定义了5种权限： 
 
 * CREATE：创建子节点权限； 
-* READ:获取节点数据和子节点列表的权限；
-* WRITE:更新节点的权限；
-* DELETE:删除子节点的权限；
-* ADMIN:设置节点的ACL权限； 
+* READ: 获取节点数据和子节点列表的权限；
+* WRITE: 更新节点的权限；
+* DELETE: 删除子节点的权限；
+* ADMIN: 设置节点的ACL权限； 
 
 注意：CREATE和DELETE这两种权限都是针对子节点的权限控制。 
 
 ### 特点
 
-* 顺序一致性：从同一客户端发起的事务请求，最终将会严格地按照顺序被应用到 ZooKeeper 中去。  
+* 顺序一致性：从同一客户端发起的事务请求，由于`zxid`的存在，最终将会严格地按照顺序被应用到 ZooKeeper 中去。  
+
+对于来自客户端的每个更新请求，ZooKeeper 都会分配一个全局唯一的递增编号，这个编号反应了所有事务操作的先后顺序，应用程序可以使用 ZooKeeper 这个特性来实现更高层次的同步原语。 这个编号也叫做时间戳——`zxid`（Zookeeper Transaction Id）  
 
 * 原子性：所有事务请求的处理结果在整个集群中所有机器上的应用情况是一致的，也就是说，要么整个集群中所有的机器都成功应用了某一个事务，要么都没有应用。 
 
 * 单一系统映像 ：无论客户端连到哪一个 ZooKeeper 服务器上，其看到的服务端数据模型都是一致的。  
 
 * 可靠性：一旦一次更改请求被应用，更改的结果就会被持久化，直到被下一次更改覆盖。
+
 
 
 
