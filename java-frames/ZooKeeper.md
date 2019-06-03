@@ -70,7 +70,27 @@ ACL（AccessControlLists）是Zookeeper的权限控制策略，其定义了5种�
 
 * 单一系统映像 ：无论客户端连到哪一个 ZooKeeper 服务器上，其看到的服务端数据模型都是一致的。  
 
-* 可靠性：一旦一次更改请求被应用，更改的结果就会被持久化，直到被下一次更改覆盖。
+* 可靠性：一旦一次更改请求被应用，更改的结果就会被持久化，直到被下一次更改覆盖。  
+
+### 集群
+与传统集群方式 Master/Slave 模式（主从模式）类似，ZooKeeper引入了`Leader`、`Follower` 和 `Observer` 三种角色的集群方式。如下图所示：
+![image](https://github.com/islongfei/Blog/blob/master/images/ZooKeeper%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F.jpg)  
+
+ZooKeeper 集群中的所有机器通过一个 Leader 选举过程来选定一台称为 “Leader” 的机器，Leader 既可以为客户端提供写服务又能提供读服务。  
+Follower 和 Observer 都只能提供读服务。Follower 和 Observer 唯一的区别在于 Observer 机器不参与 Leader 的选举过程，也不参与写操作的“过半写成功”策略，因此 Observer 机器可以在不影响写性能的情况下提升集群的读性能。  
+
+各角色职责如下图所示：
+![image](https://github.com/islongfei/Blog/blob/master/images/ZooKeeper%E8%A7%92%E8%89%B2.jpg)  
+
+### Leader选举
+当 Leader 服务器出现网络中断、崩溃退出与重启等异常情况时，ZAB 协议就会进人恢复模式并选举产生新的Leader服务器。这个过程大致是这样的：  
+
+1、`Leader election（选举阶段）`：节点在一开始都处于选举阶段，只要有一个节点得到超半数节点的票数，它就可以当选准 leader。
+2、`Discovery（发现阶段）`：在这个阶段，followers 跟准 leader 进行通信，同步 followers 最近接收的事务提议。
+3、`Synchronization（同步阶段）`:同步阶段主要是利用 leader 前一阶段获得的最新提议历史，同步集群中所有的副本。同步完成之后 准 leader 才会成为真正的 leader。
+4、`Broadcast（广播阶段）`: 到了这个阶段，Zookeeper 集群才能正式对外提供事务服务，并且 leader 可以进行消息广播。同时如果有新的节点加入，还需要对新节点进行同步。
+
+
 
 
 
