@@ -13,12 +13,15 @@
 
 * [CSDN博客链接](https://blog.csdn.net/qq_37480159)
 
+### JVM
+* [JVM简单梳理](https://github.com/islongfei/Blog/blob/master/java-basics/JVM%E7%AE%80%E8%BF%B0.md)
+
+### 常用框架
+* [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
+* [Dubbo](https://github.com/islongfei/Blog/blob/master/java-frames/Dubbo.md)
 
 ### 数据库
 * [MySQL中的锁](https://github.com/islongfei/Blog/blob/master/mysql/%E9%94%81.md)
-
-### 数据结构
-* [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
 
 ### Java基础
 * [String优化](https://github.com/islongfei/Blog/blob/master/java-basics/String.md)
@@ -28,12 +31,12 @@
 * [死锁排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E6%AD%BB%E9%94%81%E6%8E%92%E6%9F%A5.md)
 * [ThreadLocal](https://github.com/islongfei/Blog/blob/master/java-basics/ThreadLocal.md)
 
+### 数据结构
+* [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
 
-### 常用框架
-* [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
-* [Dubbo](https://github.com/islongfei/Blog/blob/master/java-frames/Dubbo.md)
-### JVM
-* [JVM简单梳理](https://github.com/islongfei/Blog/blob/master/java-basics/JVM%E7%AE%80%E8%BF%B0.md)
+
+
+
 
 
 
