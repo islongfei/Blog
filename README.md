@@ -24,9 +24,18 @@
 
 ### Java基础
 
-* [死锁排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E6%AD%BB%E9%94%81%E6%8E%92%E6%9F%A5.md)
 * [String优化](https://github.com/islongfei/Blog/blob/master/java-basics/String.md)
 * [避免正则回溯](https://github.com/islongfei/Blog/blob/master/java-basics/%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E5%9B%9E%E6%BA%AF.md)
 
+### 多线程
+
+* [死锁排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E6%AD%BB%E9%94%81%E6%8E%92%E6%9F%A5.md)
+* [ThreadLocal](https://github.com/islongfei/Blog/blob/master/java-basics/ThreadLocal.md)
+
+### JVM
+
 ### 常用框架
 * [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
+
+
+
