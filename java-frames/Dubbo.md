@@ -69,7 +69,7 @@ Dubbo的架构图如图所示：
 在暴露duubo接口的配置方式中加上例如： `loadbalance="roundrobin`"属性即可。  
 
 * 注解配置方式：消费方基于基于注解的服务级别配置方式,如下所示：
-  ```
+  ```Java
   @Reference(loadbalance = "roundrobin")
   HelloService helloService;
   ```
