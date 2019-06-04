@@ -33,6 +33,7 @@
 * [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
 * [Dubbo](https://github.com/islongfei/Blog/blob/master/java-frames/Dubbo.md)
 ### JVM
+* [JVM简单梳理](https://github.com/islongfei/Blog/blob/master/java-basics/JVM%E7%AE%80%E8%BF%B0.md)
 
 
 
