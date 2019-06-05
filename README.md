@@ -23,9 +23,10 @@
 ### 数据库
 * [MySQL中的锁](https://github.com/islongfei/Blog/blob/master/mysql/%E9%94%81.md)
 
-### Java基础
+### Java相关
 * [String优化](https://github.com/islongfei/Blog/blob/master/java-basics/String.md)
 * [避免正则回溯](https://github.com/islongfei/Blog/blob/master/java-basics/%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E5%9B%9E%E6%BA%AF.md)
+* [Java开发中的注入攻击](https://github.com/islongfei/Blog/blob/master/java-basics/Java%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB.md)
 
 ### 多线程
 * [死锁排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E6%AD%BB%E9%94%81%E6%8E%92%E6%9F%A5.md)
