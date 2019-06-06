@@ -16,7 +16,7 @@ public class AtomicInteger extends Number implements java.io.Serializable {
 
     private volatile int value;
 ```
-，这里value使用了volatile关键字，volatile在这里可以做到的作用是使得多个线程可以共享变量，
+这里value使用了volatile关键字，volatile在这里可以做到的作用是使得多个线程可以共享变量，
 但是问题在于使用volatile将使得VM优化失去作用，导致效率较低，所以要在必要的时候使用，因此AtomicInteger类不要随意使用，要在使用场景下使用。  
 
 CAS算法是指先读取要修改的变量值，对它进行计算，然后执行检查并更新这个步骤（更新前判断那个值是否是之前那个读到的值），检查并更新是个原子操作
