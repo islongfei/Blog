@@ -15,6 +15,7 @@
 
 ### JVM
 * [JVM简单梳理](https://github.com/islongfei/Blog/blob/master/java-basics/JVM%E7%AE%80%E8%BF%B0.md)
+* [新生代、老年代、永久代关系](https://github.com/islongfei/Blog/blob/master/java-basics/%E6%96%B0%E7%94%9F%E4%BB%A3%E3%80%81%E8%80%81%E5%B9%B4%E4%BB%A3%E3%80%81%E6%B0%B8%E4%B9%85%E4%BB%A3%E5%85%B3%E7%B3%BB.md)
 
 ### 常用框架
 * [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
