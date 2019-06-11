@@ -34,5 +34,46 @@ synchronized代码块是由一对monitorenter和monitorexit指令实现的，Mon
 
 2. 锁降级：当JVM进入安全点（SafePoint）的时候，会检查是否有闲置的Monitor，然后试图进行降级。  
 
-### 代码实现 
-Todo
+### 代码实现分析 
+在 jvm底层的sharedRuntime.cpp 中，体现了synchronized的主要逻辑。
+```C++
+Handle h_obj(THREAD, obj);
+  if (UseBiasedLocking) {
+    // Retry fast entry if bias is revoked to avoid unnecessary inflation
+    ObjectSynchronizer::fast_enter(h_obj, lock, true, CHECK);
+  } else {
+    ObjectSynchronizer::slow_enter(h_obj, lock, CHECK);
+  }
+```
+首先jvm会先检查，是否启用了偏斜锁。fast_enter是完整锁获取路径，slow_enter则是绕过偏斜锁，直接进入轻量级锁获取逻辑。
+那么通过slow_enter是如何实现有偏斜锁到轻量级锁呢？cpp代码如下：
+```C++
+void ObjectSynchronizer::slow_enter(Handle obj, BasicLock* lock, TRAPS) {
+  markOop mark = obj->mark();
+ if (mark->is_neutral()) {
+       // 将目前的 Mark Word 复制到 Displaced Header 上
+	lock->set_displaced_header(mark);
+	// 利用 CAS 设置对象的 Mark Word
+    if (mark == obj()->cas_set_mark((markOop) lock, mark)) {
+      TEVENT(slow_enter: release stacklock);
+      return;
+    }
+    // 检查存在竞争
+  } else if (mark->has_locker() &&
+             THREAD->is_lock_owned((address)mark->locker())) {
+	// 清除
+    lock->set_displaced_header(NULL);
+    return;
+  }
+ 
+  // 重置 Displaced Header
+  lock->set_displaced_header(markOopDesc::unused_mark());
+  ObjectSynchronizer::inflate(THREAD,
+                          	obj(),
+                              inflate_cause_monitor_enter)->enter(THREAD);
+}
+
+```
+根据代码总结为下：
+1. 设置Displaced Header，然后利用CAS设置对象Mark Word，如果成功就成功获取轻量级锁。
+2. 否则就重置Displaced Header，然后进入锁膨胀阶段。
