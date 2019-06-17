@@ -77,3 +77,6 @@ void ObjectSynchronizer::slow_enter(Handle obj, BasicLock* lock, TRAPS) {
 根据代码总结为下：
 1. 设置Displaced Header，然后利用CAS设置对象Mark Word，如果成功就成功获取轻量级锁。
 2. 否则就重置Displaced Header，然后进入锁膨胀阶段。
+
+流程： 
+![image](https://github.com/islongfei/Blog/blob/master/images/Sync%E9%94%81%E6%B5%81%E7%A8%8B.png)
