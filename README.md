@@ -23,6 +23,7 @@
 
 ### 数据库
 * [MySQL中的锁](https://github.com/islongfei/Blog/blob/master/mysql/%E9%94%81.md)
+* [事务](https://github.com/islongfei/Blog/blob/master/mysql/%E4%BA%8B%E5%8A%A1.md)
 
 ### Java相关
 * [String优化](https://github.com/islongfei/Blog/blob/master/java-basics/String.md)
