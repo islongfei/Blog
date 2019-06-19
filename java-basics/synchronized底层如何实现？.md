@@ -24,7 +24,7 @@ synchronized代码块是由一对monitorenter和monitorexit指令实现的，Mon
 
 1. 锁升级：偏斜锁->轻量级锁->重量级锁  
 
-**偏斜锁**：当没有竞争出现时，默认会使用偏斜锁。JVM会利用CAS操作（compare and swap），
+**偏斜锁**：当没有竞争出现时，默认会使用偏斜锁。JVM会利用[CAS操作](https://blog.csdn.net/qq_32998153/article/details/79529704)（compare and swap），
 在对象头上设置线程ID，以表示这个对象偏向于当前线程，所以并不涉及真正的互斥锁。
 这样做的假设是基于在很多应用场景中，大部分对象生命周期中最多会被一个线程锁定，使用偏斜锁可以降低无竞争开销。  
 
