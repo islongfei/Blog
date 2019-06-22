@@ -31,3 +31,4 @@ public class Singleton {
 ```
 解释：
 * 1.要想让一个类只能构建一个对象，自然不能让它随便去做new操作，因此Signleton的构造方法是私有的。
+//todo
