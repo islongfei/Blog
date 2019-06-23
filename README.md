@@ -42,7 +42,7 @@
 * [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
 
 ### 设计模式
-* [几种线程安全的单例模式实现](https://github.com/islongfei/Blog/blob/master/java-designPattern/Singleton.md)
+* [几种线程安全的单例模式](https://github.com/islongfei/Blog/blob/master/java-designPattern/Singleton.md)
 
 
 
