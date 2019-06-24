@@ -13,7 +13,7 @@ UD就不会，应用让我发，我就发，管它洪水滔天。
 * TCP其实是一个有状态服务，里面精确地记着发送了没有，接收到没有，发送到哪个了，应该接收哪个了，错一点儿都不行。而UDP则是无状态服务。
 
 ### UDP包头
-![image](https://github.com/islongfei/Blog/tree/master/images)  
+![image](https://github.com/islongfei/Blog/blob/master/images/UDP%E5%8C%85%E5%A4%B4.jpg)
 
 ### UDP三大特点
 * **沟通简单**：不需要一肚子花花肠子（大量的数据结构、处理逻辑、包头字段）
