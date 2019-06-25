@@ -25,6 +25,7 @@
 * [MySQL中的锁](https://github.com/islongfei/Blog/blob/master/mysql/%E9%94%81.md)
 * [事务](https://github.com/islongfei/Blog/blob/master/mysql/%E4%BA%8B%E5%8A%A1.md)
 * [索引详解](https://github.com/islongfei/Blog/blob/master/mysql/%E7%B4%A2%E5%BC%95.md)
+* [选择唯一索引还是普通索引](https://github.com/islongfei/Blog/blob/master/mysql/%E9%80%89%E6%8B%A9%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95%E8%BF%98%E6%98%AF%E6%99%AE%E9%80%9A%E7%B4%A2%E5%BC%95.md)
 
 ### Java相关
 * [String优化](https://github.com/islongfei/Blog/blob/master/java-basics/String.md)
