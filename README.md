@@ -13,10 +13,12 @@
 
 * [CSDN博客链接](https://blog.csdn.net/qq_37480159)
 
+
 ### JVM
 * [JVM简单梳理](https://github.com/islongfei/Blog/blob/master/java-basics/JVM%E7%AE%80%E8%BF%B0.md)
 * [新生代、老年代、永久代关系](https://github.com/islongfei/Blog/blob/master/java-basics/%E6%96%B0%E7%94%9F%E4%BB%A3%E3%80%81%E8%80%81%E5%B9%B4%E4%BB%A3%E3%80%81%E6%B0%B8%E4%B9%85%E4%BB%A3%E5%85%B3%E7%B3%BB.md)
 * [类加载过程](https://github.com/islongfei/Blog/blob/master/java-basics/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B.md)
+
 
 ### 常用框架
 * [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
@@ -47,9 +49,11 @@
 * [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
 * [跳表](https://github.com/islongfei/Blog/blob/master/data-structure/%E8%B7%B3%E8%A1%A8.md)
 
+
 ### 设计模式
 * [几种线程安全的单例模式](https://github.com/islongfei/Blog/blob/master/java-designPattern/Singleton.md)
-
+  
+  
 ### 网络协议
 * [UDP详解](https://github.com/islongfei/Blog/blob/master/network/UDP.md)
 
