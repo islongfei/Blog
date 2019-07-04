@@ -45,7 +45,7 @@
 * [synchronized和ReentrantLock区别](https://github.com/islongfei/Blog/blob/master/java-basics/synchronized%E5%92%8CReentrantLock%E5%8C%BA%E5%88%AB.md)
 * [synchronized底层如何实现](https://github.com/islongfei/Blog/blob/master/java-basics/synchronized%E5%BA%95%E5%B1%82%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%EF%BC%9F.md)
 
-### 数据结构
+### 数据结构与算法
 * [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
 * [跳表](https://github.com/islongfei/Blog/blob/master/data-structure/%E8%B7%B3%E8%A1%A8.md)
 * [位运算装逼](https://github.com/islongfei/Blog/blob/master/data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97%E8%A3%85%E9%80%BC.md)
