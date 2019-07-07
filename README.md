@@ -46,6 +46,7 @@
 * [synchronized和ReentrantLock区别](https://github.com/islongfei/Blog/blob/master/java-basics/synchronized%E5%92%8CReentrantLock%E5%8C%BA%E5%88%AB.md)
 * [synchronized底层如何实现](https://github.com/islongfei/Blog/blob/master/java-basics/synchronized%E5%BA%95%E5%B1%82%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%EF%BC%9F.md)
 * [ConcurrentHashMap原理](https://github.com/islongfei/Blog/blob/master/java-basics/ConcurrentHashMap%E5%8E%9F%E7%90%86.md)
+* [Java中的并发工具类](https://github.com/islongfei/Blog/blob/master/java-basics/Java%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB.md)
 
 ### 数据结构与算法
 * [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
