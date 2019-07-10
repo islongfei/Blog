@@ -11,7 +11,24 @@
 
 ### redo log  
 如果每一次的更新操作都要写进磁盘并更新，那么整个IO成本和查找成本都会很高，
-为了解决这个问题 ，mysql 使用了 WAL(Write-Ahead Logging) 技术,就是先写日志，等系统不忙得时候再写磁盘。  
+为了解决这个问题 ，mysql 使用了 WAL(Write-Ahead Logging) 技术,就是先写redo log日志，等系统不忙得时候再写磁盘。    
+
+如果写进redo log的数据非常多时，redo log被记录满了，就会在更新前擦除之前最先的数据（checkpoint时擦除的边界）。  
+
+有了 redo log 即使数据库发生异常重启，之前提交的记录也不会丢失，这个能力称为     crash-safe
 
 ### binlog
+* binlog 是InnoDB引擎特有的日志。
+* redo log 是物理日志，binlog 是逻辑日志，记录的是语句的原始逻辑。
+* redo log 是循环写的，binlog 是追加写的，binlog文件写满了会切换到下一个，不会覆盖之前的日志。  
+* 通过定期进行 redo log 备份，可以在误删表之后找回数据。
+
+### 两阶段提交
+数据更新到内存中后会执行这样的日志顺序：
+1. 写入redolog,处于prepare阶段
+2. 写入binlog
+3. 将redolog改为commit状态  
+
+两阶段提交目的为了保持两份日志的逻辑一致，防止用日志出来的库状态不一致。  
+在增加从库来提升系统都能力时，通常采用全量备份+binlog 来实现的，如果没有两段提交，就可能会出现主从不一致。
 
