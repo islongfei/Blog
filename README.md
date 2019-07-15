@@ -11,7 +11,7 @@
 此项目为个人博客，记录知识点滴 
 ***  
 
-* [CSDN 博客链接](https://blog.csdn.net/qq_37480159)
+* [CSDN 老博客链接](https://blog.csdn.net/qq_37480159)
 
 
 ### JVM
