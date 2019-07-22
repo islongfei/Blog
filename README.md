@@ -48,9 +48,10 @@
 * [后台服务变慢诊断与调优](https://github.com/islongfei/Blog/blob/master/business-skills/%E5%90%8E%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%8F%98%E6%85%A2%E7%9A%84%E8%AF%8A%E6%96%AD%E4%B8%8E%E8%B0%83%E4%BC%98.md)
 * [CQRS](https://github.com/islongfei/Blog/blob/master/business-skills/CQRS.md)
 
-### 常用框架
+### 中间件
 * [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
 * [Dubbo](https://github.com/islongfei/Blog/blob/master/java-frames/Dubbo.md)
+* [MQ](https://github.com/islongfei/Blog/blob/master/java-frames/MQ.md)
 
 ### 数据结构
 * [数组杂谈](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
