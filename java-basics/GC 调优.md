@@ -40,7 +40,7 @@ GC 耗时 1 分钟，则系统吞吐量为 99%。GC 的吞吐量一般不能低�
 
 
 * **选择合适的 GC 回收器**
-假设业务要求系统相应时间要很快，可以选择响应速度较快的 CMS（Concurrent Mark Sweep）回收器和 G1 回收器。  
+假设业务要求系统相应时间要很快，可以选择响应速度较快的 CMS（Concurrent Mark Sweep）回收器和 G1 回收器，可参考 [CMS 与 G1 区别](https://github.com/islongfei/Blog/blob/master/java-basics/CMS%20%E5%92%8C%20G1%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)。  
 而当需求对系统吞吐量有要求时，就可以选择 Parallel Scavenge 回收器来提高系统的吞吐量。  
 
 通常情况，JVM 是默认垃圾回收优化的，在没有性能衡量标准的前提下，尽量避免修改 GC 的一些性能配置参数。
