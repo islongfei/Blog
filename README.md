@@ -62,7 +62,7 @@
 
 ### 设计模式
 * [几种线程安全的单例模式](https://github.com/islongfei/Blog/blob/master/java-designPattern/Singleton.md)
-  
+* [原型模式](https://github.com/islongfei/Blog/blob/master/java-designPattern/Prototype.md) 
   
 ### 网络协议
 * [UDP 详解](https://github.com/islongfei/Blog/blob/master/network/UDP.md)
