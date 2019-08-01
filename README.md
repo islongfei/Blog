@@ -49,7 +49,7 @@
 * [Java 中的注入攻击](https://github.com/islongfei/Blog/blob/master/java-basics/Java%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB.md)
 * [后台服务变慢诊断与调优](https://github.com/islongfei/Blog/blob/master/business-skills/%E5%90%8E%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%8F%98%E6%85%A2%E7%9A%84%E8%AF%8A%E6%96%AD%E4%B8%8E%E8%B0%83%E4%BC%98.md)
 * [CQRS](https://github.com/islongfei/Blog/blob/master/business-skills/CQRS.md)
-
+* [mapstruct+lombok+validator简化代码（转）](https://blog.csdn.net/MingLiang000/article/details/82726571)
 ### 中间件
 * [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
 * [Dubbo](https://github.com/islongfei/Blog/blob/master/java-frames/Dubbo.md)
