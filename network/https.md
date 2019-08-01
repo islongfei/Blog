@@ -10,7 +10,8 @@
 * 非对称加密需要通过证书和权威机构来验证公钥的合法性。   
 
 ### HTTPS  
-**HTTPS 是综合了对称加密和非对称加密算法的 HTTP 协议。既保证传输安全，也保证传输效率。**
+HTTPS 是综合了对称加密和非对称加密算法的 HTTP 协议。既保证传输安全，也保证传输效率。  
+钥私钥主要用于传输对称加密的秘钥，而真正的双方大数据量的通信都是通过对称加密进行的。
 
 HTTPS 协议的总体思路如下所示：  
 ![image](https://github.com/islongfei/Blog/blob/master/images/https%E8%BF%87%E7%A8%8B.jpg)
