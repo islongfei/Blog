@@ -20,7 +20,9 @@
 * [类加载过程](https://github.com/islongfei/Blog/blob/master/java-basics/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B.md)
 * [GC 调优](https://github.com/islongfei/Blog/blob/master/java-basics/GC%20%E8%B0%83%E4%BC%98.md)
 * [CMS 与 G1 区别](https://github.com/islongfei/Blog/blob/master/java-basics/CMS%20%E5%92%8C%20G1%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)
-* [内存持续上升，如何排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E5%86%85%E5%AD%98%E6%8C%81%E7%BB%AD%E4%B8%8A%E5%8D%87%EF%BC%8C%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5.md)
+* [内存持续上升，如何排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E5%86%85%E5%AD%98%E6%8C%81%E7%BB%AD%E4%B8%8A%E5%8D%87%EF%BC%8C%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5.md)  
+
+
 ### 多线程
 * [死锁排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E6%AD%BB%E9%94%81%E6%8E%92%E6%9F%A5.md)
 * [ThreadLocal](https://github.com/islongfei/Blog/blob/master/java-basics/ThreadLocal.md)
