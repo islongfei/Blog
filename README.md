@@ -24,7 +24,6 @@
 
 
 ### 多线程
-* [死锁排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E6%AD%BB%E9%94%81%E6%8E%92%E6%9F%A5.md)
 * [ThreadLocal](https://github.com/islongfei/Blog/blob/master/java-basics/ThreadLocal.md)
 * [线程池](https://github.com/islongfei/Blog/blob/master/java-basics/%E7%BA%BF%E7%A8%8B%E6%B1%A0.md)
 * [volatile 详解](https://github.com/islongfei/Blog/blob/master/java-basics/volatile.md)
