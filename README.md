@@ -1,17 +1,17 @@
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://github.com/islongfei/Blog/blob/master/images/bloglogo.png" width="226" hegiht="54"  />  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-此项目为个人博客，记录知识点滴 
-***  
 
-* [CSDN 老博客链接](https://blog.csdn.net/qq_37480159)
+
+
+
+
+
+
+  
+  <h3 align="center">博客记录知识点滴 :star: </h3>  
+<p align="center">    
+<img align="center" src="https://github.com/islongfei/Blog/blob/master/images/3.jpg" width="15%" hegiht="15%"  />       </p>
+
+
 
 
 ### JVM
@@ -76,5 +76,6 @@
 * [跳表](https://github.com/islongfei/Blog/blob/master/data-structure/%E8%B7%B3%E8%A1%A8.md)
 * [位运算装逼](https://github.com/islongfei/Blog/blob/master/data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97%E8%A3%85%E9%80%BC.md)
 
-
+### CSDN  
+* [CSDN 博客](https://blog.csdn.net/qq_37480159)
 
