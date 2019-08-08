@@ -41,7 +41,7 @@
 * [选择唯一索引还是普通索引](https://github.com/islongfei/Blog/blob/master/mysql/%E9%80%89%E6%8B%A9%E5%94%AF%E4%B8%80%E7%B4%A2%E5%BC%95%E8%BF%98%E6%98%AF%E6%99%AE%E9%80%9A%E7%B4%A2%E5%BC%95.md)
 * [SQL 语句时如何执行的](https://github.com/islongfei/Blog/blob/master/mysql/SQL%E6%98%AF%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E7%9A%84.md)
 * [join 语句的两种算法及使用总结](https://github.com/islongfei/Blog/blob/master/mysql/join%20%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%B8%A4%E7%A7%8D%E7%AE%97%E6%B3%95.md)
-* [数据库优化](https://github.com/islongfei/Blog/blob/master/mysql/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96.md)  
+* [数据库性能优化](https://github.com/islongfei/Blog/blob/master/mysql/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96.md)  
 * [SQL执行计划分析](https://github.com/islongfei/Blog/blob/master/mysql/SQL%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92%E5%88%86%E6%9E%90.md)
 
 ### Java相关
