@@ -58,7 +58,8 @@
 * [几种线程安全的单例模式](https://github.com/islongfei/Blog/blob/master/java-designPattern/Singleton.md)
 * [原型模式](https://github.com/islongfei/Blog/blob/master/java-designPattern/Prototype.md) 
 * [装饰器模式](https://github.com/islongfei/Blog/blob/master/java-designPattern/Decorator.md)
-
+  
+  
 ### 中间件
 * [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
 * [Dubbo](https://github.com/islongfei/Blog/blob/master/java-frames/Dubbo.md)
