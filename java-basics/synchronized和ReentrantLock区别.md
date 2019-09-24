@@ -9,7 +9,6 @@
 * 可见性：是一个线程修改了某个共享变量，其状态能够立即被其他线程知晓，volatile 就是负责保证可见性的。
 * 有序性：是保证线程内串行语义，避免指令重排。
  
- 
  ### synchronized
  synchronized可以修饰方法和代码块，本质上 synchronized 方法等同于把方法全部语句用synchronized 块包起来。
  ### ReentrantLock 
