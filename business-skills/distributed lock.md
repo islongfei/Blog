@@ -31,8 +31,8 @@
 而其它的进程因为之前有进程把 key 设置成功了，会获取锁失败。
 #### 可能出现的问题：
 `问题 1`：  
-客户端 A 获取锁之后，刚好 A 碰见了异常情况：一个外部阻塞调用、CPU 被别的进程吃满、刚好碰到了 full GC STW，
-[常用的 CMS 和 G1 垃圾回收器 都会发生STW](https://github.com/islongfei/Blog/blob/master/java-basics/CMS%20%E5%92%8C%20G1%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)，
+客户端 A 获取锁之后，刚好 A 碰见了异常情况：一个外部阻塞调用、CPU 被别的进程吃满、刚好碰到了 full GC STW，常用的 
+[ CMS 和 G1 垃圾回收器 都会发生 STW](https://github.com/islongfei/Blog/blob/master/java-basics/CMS%20%E5%92%8C%20G1%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)，
 导致 A 花费了超过平时好几倍的时间，锁服务为了防止死锁通常会把这个锁释放掉，此时 B 获得了锁并更新了资源，之后 A 缓过来了，也去更新了资源，这就造成了数据出错。
 
  **解决方案**： 采用乐观锁的思想，加一个版本号去判断。  
