@@ -1,6 +1,5 @@
 ## 分布式锁
 
-### 介绍
 #### 为什么要使用分布式锁
 在多线程并发的情况下，可以使用同步锁或 Lock 锁来保证在同一时间内，只能有一个线程修改共享变量或执行代码块。
 但现在服务基本都是基于分布式集群来实现部署的，对于一些共享资源在分布式环境下使用 Java 锁的方式就失去作用了。
@@ -77,7 +76,33 @@ ZooKeeper 是集群实现，可以避免单点问题，zookeeper如果长时间�
 如果频繁的创建、删除节点和大量的 watch 事件，会使集群压力会非常大。
 
 ## 数据库分布式锁
-### 乐观锁方式：
-### 悲观锁方式：
+数据库实现分布式锁是最简单的一种方式。
+#### 乐观锁方式：
+可以创建一个锁表：
+```Mysql
+CREATE TABLE `optimistic_lock` (
+	`id` BIGINT NOT NULL AUTO_INCREMENT,
+	`resource` int NOT NULL COMMENT '锁定的资源',
+	`version` int NOT NULL COMMENT '版本信息',
+	`created_at` datetime COMMENT '创建时间',
+	`updated_at` datetime COMMENT '更新时间',
+	`deleted_at` datetime COMMENT '删除时间', 
+	PRIMARY KEY (`id`),
+	UNIQUE KEY `uiq_idx_resource` (`resource`) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='数据库分布式锁表';
+```
+每当更新完成时，会对版本号加1。在更新过程中，会对版本号进行比较，如果与期望的版本号是一致的，则会成功执行本次操作；如果版本号不一致，则会更新失败。
+乐观锁的思想和 CAS 是十分相似的。
+#### 缺点：
+当应用并发量高的时候，version 值在频繁变化，不会像java锁乐观锁重试一定次数后升级为悲观锁，会导致大量请求失败，影响系统的可用性，得不偿失。
+
+#### 悲观锁方式：
+`select ... for update`的方式，要保证查询和插入是在同一个事务中。
+#### 缺点：
+ RR （可重复读）事务级别中，select 的 for update 操作是基于间隙锁 gap lock 实现的，这是一种悲观锁的实现方式，所以存在阻塞问题，存在很大的性能瓶颈。
+ 
+## 总结
+不到万不得已，不要用分布式锁，不然系统整体性能会影响很多，如果需要使用分布式锁，就要考虑哪种方式是最适合的。   
+Redis 的性能是最好的，Zookeeper 次之，数据库最差。虽然 zookeeper 读写性能不如 redis，存在着性能瓶颈，但是zookeeper 的分布式锁的可靠性比 redis 强很多。如果对性能要求不是特别高，zookeeper 的分布式锁是最适合的。
 
 
