@@ -46,6 +46,8 @@
 * [后台服务变慢诊断与调优](https://github.com/islongfei/Blog/blob/master/business-skills/%E5%90%8E%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%8F%98%E6%85%A2%E7%9A%84%E8%AF%8A%E6%96%AD%E4%B8%8E%E8%B0%83%E4%BC%98.md)
 * [mapstruct+lombok+validator 简化代码（转）](https://blog.csdn.net/MingLiang000/article/details/82726571)
 * [CQRS](https://github.com/islongfei/Blog/blob/master/business-skills/CQRS.md)  
+### 分布式
+* [分布式锁](https://github.com/islongfei/Blog/blob/master/business-skills/distributed-lock.md)
 
 ### 网络协议
 * [趣谈 UDP](https://github.com/islongfei/Blog/blob/master/network/UDP.md)
