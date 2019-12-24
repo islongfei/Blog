@@ -60,7 +60,7 @@
 而是等待一段时间再重启，使等待的时间大于锁的有效时间。
 采用这种方式，这个节点在重启前所参与的锁都会过期，它在重启后就不会对现有的锁造成影响。
 ## ZooKeeper 分布式锁
-利用[ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)的顺序临时节点和 Watch 机制：
+利用 [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md) 的顺序临时节点和 Watch 机制：
 * **顺序临时节点**： ZooKeeper 节点类型分为持久节点、临时节点，节点可以被标记为有序性，创建一个持久节点为父节点，在父节点创建临时节点，并标记临时节点为有序性，那么整个节点会具有顺序递增的特点。  
 * **Watch机制**：ZooKeeper 允许用户在指定节点上注册一些 Watcher（事件监听器），并且在一些特定事件触发的时候，ZooKeeper 服务端会将事件通知给用户。
 #### 原理：
