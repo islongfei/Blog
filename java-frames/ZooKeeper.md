@@ -12,7 +12,7 @@ Zookeeper 一个最常用的使用场景就是用于担任服务生产者和服�
 
 ![image](https://github.com/islongfei/Blog/blob/master/images/ZooKeeper%E5%8E%9F%E7%90%86.jpg)
 
-为什么最好使用奇数台服务器构成 ZooKeeper 集群？  
+`为什么最好使用奇数台服务器构成 ZooKeeper 集群？`  
 
 由于ZooKeeper半数以上节点存活ZooKeeper 就能正常服务的机制，所以使用奇数台服务器，更省资源。比如部署4台服务器，要正常服务就要半数以上存活，只允许挂掉1台，用3台也只允许挂掉1台，那么为什么不去节省资源使用3台服务器达到同样的效果呢。  
 
