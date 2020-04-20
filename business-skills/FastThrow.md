@@ -1,7 +1,7 @@
 ## 异常堆栈丢失
 
 ### 问题描述
-前几天发现项目个别账号在页面查询会报错，重新n次后，每次日志异常信息仅仅只有一行NPE，这就很尴尬了，正常情况下当异常发生时，JVM会回溯调用栈，构建异常完整的堆栈信息，但日志没有打印异常堆栈信息，很难去定位到 NPE 的来源，如图所示：
+前几天发现线上个别账号在页面查询会报错，重式n次后，每发现次日志异常信息都仅仅只有一行NPE，这就很尴尬了，正常情况下当异常发生时，JVM会回溯调用栈，构建异常完整的堆栈信息，但日志没有打印异常堆栈信息，很难去定位到 NPE 的来源，如图所示：
   
 <img src="https://github.com/islongfei/Blog/blob/master/images/FastThrow1%20.png" width="85%" hegiht="85%"  />
 
@@ -82,7 +82,73 @@
 JVM 是默认开启了Fast Throw 的， OmitStackTraceInFastThrow和StackTraceInThrowable都默认为true ，如果要关闭 Fast Throw ，加上 `-XX:-OmitStackTraceInFastThrow` 参数即可。
 
 ### 验证
-* **本地验证**
+* **本地验证**  
+本地用多线程模拟在同一处代码频繁抛出 NPE ，看是否会出现 JVM Fast Throw 丢失异常的场景。
+代码如下：
+```Java 
+package com.longfei.test;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class FastThrowMain {
+    public static void main(String[] args) throws InterruptedException {
+        NpeThread npeThread = new NpeThread();
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            executorService.execute(npeThread);
+            Thread.sleep(2);
+        }
+    }
+}
+
+package com.longfei.test;
+
+public class NpeThread extends Thread {
+    private static int count = 0;
+    @Override
+    public void run() {
+        try {
+            System.out.println(this.getClass().getSimpleName() + "_" + (++count));
+            //测试 NullPointerException
+            String str = null;
+            System.out.println(str.length());
+
+//            //测试 ArrayIndexOutOfBoundsException
+//            int[] array = new int[1];
+//            System.out.println(array[2]);
+
+//            //测试 ArithmeticException
+//            System.out.println(1 / 0);
+
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+    }
+}
+```  
+
+测试结果如下图，在 NPE 抛出了6000多次后，发生了 Fast Throw ，异常堆栈丢失。  
+
+<img src="https://github.com/islongfei/Blog/blob/master/images/FastThrow3.png" width="85%" hegiht="85%"  /> 
+
+本地加上 `-XX:-OmitStackTraceInFastThrow`之后测试结果， NPE 抛出了 2w 多次后， 没有发生Fast Throw，异常堆栈一直都在，说明参数生效。  
+
+<img src="https://github.com/islongfei/Blog/blob/master/images/FastThrow4.png" width="85%" hegiht="85%"  />   
+
+* **uat环境验证**  
+uat环境加上`-XX:-OmitStackTraceInFastThrow`配置之后，用之前权限配置有误的账户请求同一报错接口，在压测了3w多次请求后，没有再次出现 Fast Throw 异常堆栈丢失，测试结果如下图所示：  
+
+<img src="https://github.com/islongfei/Blog/blob/master/images/FastThrow5.png" width="85%" hegiht="85%"  /> 
+
+### 总结
+虽然 JVM 的 Fast Throw 机制会对性能有所优化，但在实际的大部分场景下，如果为了追求性能的极致而忽略异常堆栈信息的打印，这其实是得不偿失的，很多时候用异常堆栈信息来定位问题是十分有必要的。  
+**建议在项目中加上`-XX:-OmitStackTraceInFastThrow` JVM 参数，关闭 Fast Throw** 。
+
+
+
+
+
 
 
 
