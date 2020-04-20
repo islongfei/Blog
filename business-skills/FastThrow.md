@@ -143,7 +143,7 @@ uat环境加上`-XX:-OmitStackTraceInFastThrow`配置之后，用之前权限配
 
 ### 总结
 虽然 JVM 的 Fast Throw 机制会对性能有所优化，但在实际的大部分场景下，如果为了追求性能的极致而忽略异常堆栈信息的打印，这其实是得不偿失的，很多时候用异常堆栈信息来定位问题是十分有必要的。  
-**建议在项目中加上`-XX:-OmitStackTraceInFastThrow` JVM 参数，关闭 Fast Throw 防止异常堆栈丢失，难以排查问题** 。
+**建议在项目中加上`-XX:-OmitStackTraceInFastThrow` JVM 参数，关闭 Fast Throw 防止异常堆栈丢失难以排查问题** 。
 
 
 
