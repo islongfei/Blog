@@ -6,7 +6,7 @@
 <img src="https://github.com/islongfei/Blog/blob/master/images/FastThrow1%20.png" width="85%" hegiht="85%"  />
 
 ### 问题排查
-于是就顺藤摸瓜，先从日志打印的出处：全局异常处理去排查 NPE，
+于是就顺藤摸瓜，先从最上游的日志打印的出处：全局异常处理去排查 NPE，
 ```Java         
         String errorStack = Throwables.getStackTraceAsString(e);
         Object url = request.getRequestURI();
