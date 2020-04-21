@@ -5,6 +5,7 @@
 
 
 ### JVM
+* [异常堆栈丢失](https://github.com/islongfei/Blog/blob/master/business-skills/FastThrow.md)
 * [JVM 简单梳理](https://github.com/islongfei/Blog/blob/master/java-basics/JVM%E7%AE%80%E8%BF%B0.md)
 * [新生代、老年代、永久代关系](https://github.com/islongfei/Blog/blob/master/java-basics/%E6%96%B0%E7%94%9F%E4%BB%A3%E3%80%81%E8%80%81%E5%B9%B4%E4%BB%A3%E3%80%81%E6%B0%B8%E4%B9%85%E4%BB%A3%E5%85%B3%E7%B3%BB.md)
 * [类加载过程](https://github.com/islongfei/Blog/blob/master/java-basics/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B.md)
