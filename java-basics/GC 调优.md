@@ -2,7 +2,7 @@
 * [JDK 1.8 支持的JVM参数官方文档](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABHDABI)
 * `top -H -p pid` 找到 CPU 使用率比较高的一些线程
 * `java -XX:+PrintFlagsFinal` 查看所有jvm参数默认值
-* `jinfo -flags pid` 查询运行的jvm参数
+* `jinfo -flags pid` 或 `jcmd pid VM.flags` 查询运行的jvm参数
 * `jinfo -flag PrintGCDetails pid` 查看某个JVM参数是否开启
 * `jmap -heap pid` 查询jvm堆内存使用情况
 * `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息）
@@ -72,7 +72,10 @@ GC 耗时 1 分钟，则系统吞吐量为 99%。GC 的吞吐量一般不能低�
     通常情况，JVM 是默认垃圾回收优化的，在没有性能衡量标准的前提下，尽量避免修改 GC 的一些性能配置参数。
 如果一定要改，那就**必须基于大量的测试分析和线上的具体性能来进行调整**。
 
-
+### 相关JVM参数调整优化 
+* `-XX:ParallelGCThreads=n`n为配置GC线程数，如果使用了 Parallel 回收器参数，可以结合实际业务场景来设置线程数。[JVM 是如何设置 ParallelGCThreads 默认值的]
+(https://blog.csdn.net/bdx_hadoop_opt/article/details/38021209)
+* `-XX:MaxMetaspaceSize=256m` 通过元空间最大值，来降低full GC，如果项目JVM加载的类特别多就必须增大-XX:MaxMetaspaceSize了，可以不用给定MaxMetaspaceSize的值。血和泪的教训（有次同事将MaxMetaspaceSize 设置的比较小，由于后期项目的类越来越多，当最大值不能满足实际所需内存时，导致full GC 每秒发生两次，发生了OOM导致系统停摆）。
 
 
 
