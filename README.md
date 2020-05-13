@@ -5,12 +5,12 @@
 
 
 ### JVM
-* [异常堆栈丢失](https://github.com/islongfei/Blog/blob/master/business-skills/FastThrow.md)
 * [JVM 简单梳理](https://github.com/islongfei/Blog/blob/master/java-basics/JVM%E7%AE%80%E8%BF%B0.md)
+* [JVM 调优](https://github.com/islongfei/Blog/blob/master/java-basics/GC%20%E8%B0%83%E4%BC%98.md)
+* [CMS 与 G1 区别](https://github.com/islongfei/Blog/blob/master/java-basics/CMS%20%E5%92%8C%20G1%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+* [异常堆栈丢失](https://github.com/islongfei/Blog/blob/master/business-skills/FastThrow.md)
 * [新生代、老年代、永久代关系](https://github.com/islongfei/Blog/blob/master/java-basics/%E6%96%B0%E7%94%9F%E4%BB%A3%E3%80%81%E8%80%81%E5%B9%B4%E4%BB%A3%E3%80%81%E6%B0%B8%E4%B9%85%E4%BB%A3%E5%85%B3%E7%B3%BB.md)
 * [类加载过程](https://github.com/islongfei/Blog/blob/master/java-basics/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B.md)
-* [GC 调优](https://github.com/islongfei/Blog/blob/master/java-basics/GC%20%E8%B0%83%E4%BC%98.md)
-* [CMS 与 G1 区别](https://github.com/islongfei/Blog/blob/master/java-basics/CMS%20%E5%92%8C%20G1%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)
 * [内存持续上升，如何排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E5%86%85%E5%AD%98%E6%8C%81%E7%BB%AD%E4%B8%8A%E5%8D%87%EF%BC%8C%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5.md)  
 
 ### 系统优化
