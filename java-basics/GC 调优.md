@@ -14,8 +14,7 @@
 在 JDK1.8 环境下，默认使用的是 Parallel Scavenge（年轻代）+Serial Old（老年代）垃圾回收器。   
 
 
-看上去 Parallel Scavenge 与 ParNew都是并行处理，也都是用复制算法，**但是有什么区别呢**？  
-
+看上去 Parallel Scavenge 与 ParNew都是并行处理，也都是用复制算法，**但是有什么区别呢**？
 Parallel Scavenge收集器有一个参数- XX：+UseAdaptiveSizePolicy当这个参数打开之后，就不需要手动指定新生代的大小，Eden和Survivor区的比例，晋升老年代对象等细节参数了，虚拟机会根据当前系统的运行情况收集性能监控信息，动态调整这些参数以提供最合适的停顿时间或者最大吞吐量，这种调节方式成为GC自适应的调节策略。
 
 ### GC 的性能衡量指标
@@ -76,7 +75,7 @@ GC 耗时 1 分钟，则系统吞吐量为 99%。GC 的吞吐量一般不能低�
 * `-XX:ParallelGCThreads=n`n为配置GC线程数，如果使用了 Parallel 回收器参数，可以结合实际业务场景来设置线程数。[JVM 是如何设置 ParallelGCThreads 默认值的](https://blog.csdn.net/bdx_hadoop_opt/article/details/38021209)
 * `-XX:MaxMetaspaceSize=256m` 通过元空间最大值，来降低full GC，如果项目JVM加载的类特别多就必须增大最大值了了，可以不用给定MaxMetaspaceSize的值。 
 
-一次血和泪的教训：有次同事将MaxMetaspaceSize 设置的比较小，由于后期项目的类越来越多，当最大值不能满足实际所需内存时，导致full GC 每秒发生两次，发生了OOM导致系统停摆。
+    一次血和泪的教训：有次同事将MaxMetaspaceSize 设置的比较小，由于后期项目的类越来越多，当最大值不能满足实际所需内存时，导致full GC 每秒发生两次，发生了OOM导致系统停摆。
 
 
 
