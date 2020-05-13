@@ -1,7 +1,9 @@
 ### 自己经常用的命令
+* [JDK 1.8 支持的JVM参数官方文档](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html#BABHDABI)
 * `top -H -p pid` 找到 CPU 使用率比较高的一些线程
 * `java -XX:+PrintFlagsFinal` 查看所有jvm参数默认值
 * `jinfo -flags pid` 查询运行的jvm参数
+* `jinfo -flag PrintGCDetails pid` 查看某个JVM参数是否开启
 * `jmap -heap pid` 查询jvm堆内存使用情况
 * `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息）
 * `java -XX:+PrintFlagsFinal | grep manageable` 查看哪些参数可以动态修改
@@ -46,22 +48,31 @@ GC 耗时 1 分钟，则系统吞吐量为 99%。GC 的吞吐量一般不能低�
 
 * **降低 Full GC 的频率**  
 由于堆内存空间不足或老年代对象太多，会触发 Full GC，频繁的 Full GC 会带来上下文切换，增加系统的性能开销。  
-大对象创建会直接进入老年代（可通过 -XX:PretenureSizeThreshold 指定进入老年代大对象的大小），
+**什么时候会发生Full GC 呢？**
+* 当年轻代晋升到老年代的对象大小比目前老年代剩余的空间大小还要大时，此时会触发Full GC；
+* 当老年代的空间使用率超过某阈值时，此时会触发Full GC;
+* 当元空间不足时（JDK1.7永久代不足），也会触发Full GC;
+* 当调用System.gc()也会安排一次Full GC;
+由于大对象创建会直接进入老年代（可通过 -XX:PretenureSizeThreshold 指定进入老年代大对象的大小），
 占用老年代空间，所以应合理减少大对象的创建，可以通过一下方式：  
 `在业务上拆解大对象，拆解后进行分批查询或处理`  
 `增大堆内存空间，可以设置初始化堆内存为最大堆内存`
 
+**一个web应用，多久一次Full GC才算正常呢?**    
+根据具体的业务来分析，正常小对象且请求平缓的应用服务中，几天一次较为正常。如果有大量大对象创建或者承受高并发场景的服务，Full GC可能会更频繁。可以用
+`jstat -gc pid 1000`来查看 full GC 的次数。
 
-* **选择合适的 GC 回收器**
+* **根据业务场景来选择 GC 回收器**
+[各种 GC 回收器官方文档介绍](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/index.html)
 假设业务要求系统相应时间要很快，可以选择响应速度较快的 CMS（Concurrent Mark Sweep）回收器和 G1 回收器，可参考 [CMS 与 G1 区别](https://github.com/islongfei/Blog/blob/master/java-basics/CMS%20%E5%92%8C%20G1%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)。  
 而当需求对系统吞吐量有要求时，就可以选择 Parallel Scavenge 回收器来提高系统的吞吐量。  
 
 通常情况，JVM 是默认垃圾回收优化的，在没有性能衡量标准的前提下，尽量避免修改 GC 的一些性能配置参数。
-如果一定要改，那就必须基于大量的测试结果来进行调整。
+**如果一定要改，那就必须基于大量的测试分析和线上的具体性能来进行调整**。
 
-**一个web应用，多久一次Full GC才算正常呢?**    
 
-根据具体的业务来分析，正常小对象且请求平缓的应用服务中，几天一次较为正常。如果有大量大对象创建或者承受高并发场景的服务，Full GC可能会更频繁。
+
+
 
 //Todo : jdk各版本选择的垃圾回收器对比及原因
 
