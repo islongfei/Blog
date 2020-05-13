@@ -1,3 +1,12 @@
+### 自己经常用的命令
+* `top -H -p pid` 找到 CPU 使用率比较高的一些线程
+* `java -XX:+PrintFlagsFinal` 查看所有jvm参数默认值
+* `jinfo -flags pid` 查询运行的jvm参数
+* `jmap -heap pid` 查询jvm堆内存使用情况
+* `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息）
+* `java -XX:+PrintFlagsFinal | grep manageable` 查看哪些参数可以动态修改
+* `jinfo -flag +HeapDumpBeforeFullGC pid`  执行动态修改某些JVM参数
+
 ### 垃圾回收器
 <img src="https://github.com/islongfei/Blog/blob/master/images/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8.jpg" width="85%" hegiht="85%"  />  
 在 JDK1.8 环境下，默认使用的是 Parallel Scavenge（年轻代）+Serial Old（老年代）垃圾回收器。   
