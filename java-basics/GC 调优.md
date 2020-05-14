@@ -5,7 +5,10 @@
 * `jinfo -flags pid` 或 `jcmd pid VM.flags` 查询运行的jvm参数
 * `jinfo -flag PrintGCDetails pid` 查看某个JVM参数是否开启
 * `jmap -heap pid` 查询jvm堆内存使用情况
-* `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息）
+* `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息）  
+1|2|3|  
+-::-::-  
+1|2|3
 * `java -XX:+PrintFlagsFinal | grep manageable` 查看哪些参数可以动态修改
 * `jinfo -flag +HeapDumpBeforeFullGC pid`  执行动态修改某些JVM参数
 * `Java -XX:+PrintCommandLineFlags`  显示出VM初始化完毕后所有跟最初的默认值不同的参数及它们的值
@@ -26,6 +29,48 @@ GC 耗时 1 分钟，则系统吞吐量为 99%。GC 的吞吐量一般不能低�
 由于垃圾回收器和应用程序交替运行，程序的停顿时间就会变短，但其效率很可能不如独占垃圾回收器，系统的吞吐量也很可能会降低。
 * **垃圾回收频率**：通常垃圾回收的频率越低越好，增大堆内存空间可以有效降低垃圾回收发生的频率，但同时也意味着堆积的回收对象越多，
 最终也会增加回收时的停顿时间。所以要去适当地增大堆内存空间，保证正常的垃圾回收频率即可。 
+<table >
+  <tr>
+    <th>S0C</th>
+    <th>S1C</th>
+    <th>S0U</th>
+      <th>S1U</th>
+      <th>EC</th>
+      <th>EU</th>
+      <th>OC</th>
+      <th>OU</th>
+      <th>MC</th>
+      <th>MU</th>
+      <th>CCSC</th>
+      <th>CCSU</th>
+      <th>YGC</th>
+      <th>YGCT</th>
+      <th>FGC</th>
+      <th>FGCT</th>
+      <th>GCT</th>
+      
+  </tr>
+  <tr>
+    <td>年轻代中第一个survivor（幸存区）的容量 (字节)</td>
+    <td>第二个survivor容量</td>
+    <td>第一个survivor已使用的空间</td>
+    <td>第二个survivor已使用的空间</td>
+    <td>年轻代中Eden的容量 (字节)</td>
+    <td>Eden目前已使用空间</td>
+    <td>Old代的容量 (字节)</td>
+    <td>Old代已使用的空间 (字节)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>应用启动到目前的young gc次数</td>
+    <td>young gc花费的总时间</td>
+    <td>full gc次数</td>
+    <td>full gc时间</td>
+    <td>gc的总时间</td>
+  </tr>
+
+</table>
 
 ### 查看 GC 日志  
 * 打印 GC 日志  
