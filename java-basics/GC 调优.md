@@ -8,6 +8,8 @@
 * `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息）
 * `java -XX:+PrintFlagsFinal | grep manageable` 查看哪些参数可以动态修改
 * `jinfo -flag +HeapDumpBeforeFullGC pid`  执行动态修改某些JVM参数
+* `Java -XX:+PrintCommandLineFlags`  显示出VM初始化完毕后所有跟最初的默认值不同的参数及它们的值
+
 
 ### 垃圾回收器选型
 <img src="https://github.com/islongfei/Blog/blob/master/images/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8.jpg" width="85%" hegiht="85%"  />  
