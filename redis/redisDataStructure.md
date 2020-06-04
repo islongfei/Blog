@@ -6,5 +6,5 @@
 ### 6. Sets
 ### 7. Sorted Sets
 ### 8. Geospatial Indexes
-### 10. Hyperloglog
-### 11. stream(5.0新特性)
+### 9. Hyperloglog
+### 10. stream(5.0新特性)
