@@ -1,4 +1,5 @@
 # canal
+canal 主要用途是基于 MySQL 数据库增量日志解析，提供增量数据订阅和消费。
 ### mysql 主从复制原理
 <img src="https://github.com/islongfei/Blog/blob/master/images/mysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.jpg"  />  
 
@@ -9,3 +10,5 @@
 * canal 模拟 MySQL slave 的交互协议，**伪装自己为 MySQL slave** ，向 MySQL master 发送dump 协议
 * MySQL master 收到 dump 请求，开始推送 binary log 给 slave (即 canal )
 * canal 解析 binary log 对象(原始为 byte 流)
+
+支持将canal server接收到的binlog数据直接投递到 RocketMQ Kafka 中。
