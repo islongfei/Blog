@@ -11,5 +11,5 @@ canal 主要用途是基于 MySQL 数据库增量日志解析，提供增量数�
 * MySQL master 收到 dump 请求，开始推送 binary log 给 slave (即 canal )
 * canal 解析 binary log 对象(原始为 byte 流)
 
-支持将canal server接收到的binlog数据直接投递到 RocketMQ Kafka 中。
+支持将canal server接收到的binlog数据直接投递到 RocketMQ 或 Kafka 中。
 >业务应用:通过mysql binlog -> canal -> (rocketMq/kafka) -> mt_binlog -> RPC调用各个mt_中台Dubbo接口通路去实时刷新数据
