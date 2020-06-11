@@ -54,11 +54,11 @@
 * [分布式锁](https://github.com/islongfei/Blog/blob/master/business-skills/distributed-lock.md)
 
 ### 网络协议
-* [趣谈 UDP](https://github.com/islongfei/Blog/blob/master/network/UDP.md)
-* [TCP 详解](https://github.com/islongfei/Blog/blob/master/network/TCP.md)
-* [HTTP 协议](https://github.com/islongfei/Blog/blob/master/network/http.md)
-* [HTTPS 协议](https://github.com/islongfei/Blog/blob/master/network/https.md)
-* [DNS 协议](https://github.com/islongfei/Blog/blob/master/network/DNS.md)
+* [UDP](https://github.com/islongfei/Blog/blob/master/network/UDP.md)
+* [TCP](https://github.com/islongfei/Blog/blob/master/network/TCP.md)
+* [HTTP](https://github.com/islongfei/Blog/blob/master/network/http.md)
+* [HTTPS](https://github.com/islongfei/Blog/blob/master/network/https.md)
+* [DNS](https://github.com/islongfei/Blog/blob/master/network/DNS.md)
 
 
 ### 设计模式
