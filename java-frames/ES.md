@@ -1,4 +1,4 @@
-总结内容方向：
+`总结内容方向：`
 * Lucene 
 * 倒排索引
 * 全文检索
@@ -7,7 +7,7 @@
 * es 在数据量很大情况下（亿级）如何提高性能
 * es 生产集群部署架构，每个索引数据量大概多少，每个索引有多少个分片？  
 
-### es 分布式架构原理
+### 一、es 分布式架构原理
 es是基于lucene的，已成为大部分互联网系统的标配
 分布式：在每台机器启动es进程，多个进程组成一个集群。
 es存储数据的基本单位是索引，一个索引相当于mysql的一张表，
@@ -32,7 +32,7 @@ es会在所有的进程中选择一个作为master节点，复制维护索引元
 
 读，可以从 primary或者 replica中去读数据。
 
-### es 写入原理
+### 二、es 写入原理
 es 写数据的核心为 **refresh、flush、translog、merge** 。   
 写数据随便挑一个机器的 进程节点去写，这个节点被叫做协调节点。协调节点会对这条数据进行hash，hash完了之后它把这条数据路由到对应的primary shard中，primary shard 将数据同步到其他 replica shard 上去。 如果primary 和 replica 都写完了，就会告诉客户端数据写入完成。  
 
@@ -64,3 +64,38 @@ translog其实也是先写入os cache的，默认每隔5秒刷一次到磁盘中
 
 **es 删除数据**    
 如果是删除操作，commit的时候会在磁盘中生成一个.del文件，里面将某个document标识为deleted状态，那么搜索的时候根据.del文件就知道这个doc被删除了。
+
+### 三、 es 读数据原理  
+查询，GET某一条数据，写入了某个document，这个document会自动给你分配一个全局唯一的id，doc id，同时也是根据doc id进行hash路由到对应的primary shard上面去。也可以手动指定doc id，比如用订单id，用户id。也可以通过doc id来查询，会根据doc id进行hash，判断出来当时把doc id分配到了哪个shard上面去，从那个shard去查询。  
+具体过程如下： 
+1. 客户端发送请求到任意一个node（负载均衡），成为coordinate node（协调节点）。  
+2. coordinate node对document进行路由，将请求转发到对应的node，此时会使用round-robin随机轮询算法，在primary shard以及其所有replica中随机选择一个，让读请求负载均衡。
+3. 接收请求的node返回document给coordinate node。
+4. coordinate node返回document给客户端。  
+
+### 四、 es 搜索数据原理  
+
+es最强大的是做全文检索，就是比如有三条数据：java真好玩、java哈哈哈、j2ee嘿嘿嘿。根据java关键词来搜索，将包含java的document给搜索出来，es就会给你返回：java真好玩、java哈哈哈。  
+
+具体过程如下：  
+1. 客户端发送请求到一个coordinate node。  
+2. 协调节点将搜索请求转发到所有的shard对应的primary shard或replica shard也可以。  
+3. query phase：每个shard将自己的搜索结果（其实就是一些doc id），返回给协调节点，由协调节点进行数据的合并、排序、分页等操作筛选出最匹配的哪些数据，产出最终结果。  
+4. fetch phase：接着由协调节点，根据doc id去各个节点上拉取实际的document数据，最终返回给客户端。  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
