@@ -75,7 +75,7 @@ translog其实也是先写入os cache的，默认每隔5秒刷一次到磁盘中
 
 ### 四、 es 搜索数据原理  
 
-es最强大的是做全文检索，就是比如有三条数据：java真好玩、java哈哈哈、j2ee嘿嘿嘿。根据java关键词来搜索，将包含java的document给搜索出来，es就会给你返回：java真好玩、java哈哈哈。  
+es最强大的是做全文检索，就是比如有三条数据：`java真好玩、java哈哈哈、j2ee嘿嘿嘿`。根据java关键词来搜索，将包含java的document给搜索出来，es就会给你返回：`java真好玩、java哈哈哈`。  
 
 具体过程如下：  
 1. 客户端发送请求到一个coordinate node。  
