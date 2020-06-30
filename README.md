@@ -1,4 +1,4 @@
-<h3 align="center">博客记录知识点滴 :star: </h3>  
+<h3 align="center">博客记录点滴 :star: </h3>  
 <p align="center">    
 <img align="center" src="https://github.com/islongfei/Blog/blob/master/images/3.jpg" width="15%" hegiht="15%" />  
 </p>  
