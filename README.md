@@ -1,9 +1,9 @@
-<h2 align="center">博客记录点滴 :star: </h2>  
+<h3 align="center">博客记录点滴 :star: </h3>  
 <p align="center">    
 <img align="center" src="https://github.com/islongfei/Blog/blob/master/images/3.jpg" width="15%" hegiht="15%" />  
 </p>  
 
-### JVM
+## JVM
 * [JVM 简单梳理](https://github.com/islongfei/Blog/blob/master/java-basics/JVM%E7%AE%80%E8%BF%B0.md)
 * [JVM 调优经验](https://github.com/islongfei/Blog/blob/master/java-basics/GC%20%E8%B0%83%E4%BC%98.md)
 * [CMS 与 G1 区别](https://github.com/islongfei/Blog/blob/master/java-basics/CMS%20%E5%92%8C%20G1%20%E7%9A%84%E5%8C%BA%E5%88%AB.md)
@@ -13,7 +13,7 @@
 * [内存持续上升，如何排查](https://github.com/islongfei/Blog/blob/master/business-skills/%E5%86%85%E5%AD%98%E6%8C%81%E7%BB%AD%E4%B8%8A%E5%8D%87%EF%BC%8C%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5.md)  
   
 
-### 中间件总结
+## 中间件总结
 * [ES 分布式架构原理](https://github.com/islongfei/Blog/blob/master/java-frames/ES01.md)
 ---
 * [ZooKeeper](https://github.com/islongfei/Blog/blob/master/java-frames/ZooKeeper.md)
