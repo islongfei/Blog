@@ -82,7 +82,7 @@
 * [Redis 数据结构](https://github.com/islongfei/Blog/blob/master/redis/redisDataStructure.md)
 
 ## 数据结构
-* [对数组一些看法](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
+* [对数组的一些看法](https://github.com/islongfei/Blog/blob/master/data-structure/%E6%95%B0%E7%BB%84%E6%9D%82%E8%B0%88.md)
 * [跳表](https://github.com/islongfei/Blog/blob/master/data-structure/%E8%B7%B3%E8%A1%A8.md)  
 * [B+ 树与 B-树对比](https://github.com/islongfei/Blog/blob/master/data-structure/B%2B%20%E6%A0%91%E4%B8%8E%20B-%E6%A0%91%E5%AF%B9%E6%AF%94.md)
 * [位运算装逼](https://github.com/islongfei/Blog/blob/master/data-structure/%E4%BD%8D%E8%BF%90%E7%AE%97%E8%A3%85%E9%80%BC.md)
