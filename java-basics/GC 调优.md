@@ -4,7 +4,7 @@
 * `java -XX:+PrintFlagsFinal` 查看所有jvm参数默认值
 * `jinfo -flags pid` 或 `jcmd pid VM.flags` 查询运行的jvm参数
 * `jinfo -flag PrintGCDetails pid` 查看某个JVM参数是否开启
-* `jmap -heap pid` 查询jvm堆内存使用情况
+* `jmap -heap pid` 查询jvm堆内存使用情况，使用 arthas `jvm`命令也可查询。
 * `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息）,具体显示信息如下：  
 <table >
   <tr>
