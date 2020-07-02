@@ -5,7 +5,13 @@
 * `jinfo -flags pid` 或 `jcmd pid VM.flags` 查询运行的jvm参数
 * `jinfo -flag PrintGCDetails pid` 查看某个JVM参数是否开启
 * `jmap -heap pid` 查询jvm堆内存使用情况，使用 arthas `jvm`命令也可查询。
-* `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息）,具体显示信息如下：  
+* `jstat -gc pid 1000`  查询gc次数（包含full gc 次数，1000为1000ms刷新一次统计信息），具体显示信息在下方。 
+* `java -XX:+PrintFlagsFinal | grep manageable` 查看哪些参数可以动态修改
+* `jinfo -flag +HeapDumpBeforeFullGC pid`  执行动态修改某些JVM参数
+* `Java -XX:+PrintCommandLineFlags`  显示出JVM初始化完毕后所有跟最初的默认值不同的参数及它们的值。  
+
+
+jsat -gc 参数含义：
 <table >
   <tr>
     <th>S0C</th>
@@ -49,9 +55,6 @@
 
 </table>  
 
-* `java -XX:+PrintFlagsFinal | grep manageable` 查看哪些参数可以动态修改
-* `jinfo -flag +HeapDumpBeforeFullGC pid`  执行动态修改某些JVM参数
-* `Java -XX:+PrintCommandLineFlags`  显示出VM初始化完毕后所有跟最初的默认值不同的参数及它们的值
 
 
 ### 垃圾回收器选型
