@@ -29,20 +29,20 @@
 `thread -n 3`
 
 
-* 
-thread -b
+* 找出当前阻塞其他线程的线程，发现死锁  
+`thread -b`
 
 
-* 查看当前jvm信息
+* 查看当前jvm信息  
 `jvm` 
 
-* 查看类加载信息 (输出当前类的详细信息，包括这个类所加载的原始文件来源、类的声明、加载的ClassLoader等详细信息)
+* 查看类加载信息 (输出当前类的详细信息，包括这个类所加载的原始文件来源、类的声明、加载的ClassLoader等详细信息)  
 `sc -d com.pagoda.basedata.api.goods.BasGoodsService`
 
-* 查看类的字段信息
+* 查看类的字段信息  
 `sc -f com.pagoda.basedata.api.goods.BasGoodsService`
 
-* 反编译指定类,会有classLoader信息
+* 反编译指定类,会有classLoader信息  
 `jad java.lang.String`
 
 * redefine 动态替换内存中class，热部署，限制条件：只能改方法实现（方法运行完成后才会生效），不能改方法名， 不能改属性
