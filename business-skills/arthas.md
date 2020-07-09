@@ -25,11 +25,11 @@
 *  查看方法调用前后参数  
 `watch com.pagoda.order.service.goods.BasOrgGoodsServiceImpl dealOrgGoodsInTwoDepot "{params,target,returnObj}" -x 2 -b -s -n 2`
 
-一键展示当前最忙的前N个线程并打印堆栈
-thread -n 3
+* 一键展示当前最忙的前N个线程并打印堆栈  
+`thread -n 3`
 
-找出当前阻塞其他线程的线程，发现死锁
-(有时候我们发现应用卡住了， 通常是由于某个线程拿住了某个锁， 并且其他线程都在等待这把锁造成)
+
+* 
 thread -b
 
 
