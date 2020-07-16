@@ -41,7 +41,7 @@ redefine /home/work/spring-boot/starter/com/pagoda/basedata/service/goods/BasGoo
 由于项目用的的日志系统为 elk ,在调用对应接口后，直接在 kibina 上查找日志，看加上的日志是否热加载成功。如图，日志成功打印出来，在没有重启服务的情况下实现代码修改热加载。  
 ![image](https://github.com/islongfei/Blog/blob/master/images/arthas02.png)   
 
-### 四、注意  
-* `redefine`热更新不允许新增加field/method，正在跑的函数，没有退出是不会生效的。
+### 四、注意 
+* `redefine`热更新不允许新增加 field/method。另外正在跑的函数如果没有退出，热更新是不会生效的。
 * Arthas 里 `jad/mc/redefine` 一条龙来线上热更新代码，非常强大，但也很危险，需要做好权限管理，操作不规范，同事两行泪 :sob: 。
 
