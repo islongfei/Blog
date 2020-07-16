@@ -42,6 +42,6 @@ redefine /home/work/spring-boot/starter/com/pagoda/basedata/service/goods/BasGoo
 ![image](https://github.com/islongfei/Blog/blob/master/images/arthas02.png)   
 
 ### 四、注意 
-* `redefine`热更新不允许新增加 field/method。另外正在跑的函数如果没有退出，热更新是不会生效的。
+* `redefine`热更新的类中不允许新增加 field/method。另外正在跑的函数如果没有退出，热更新是不会生效的。
 * Arthas 里 `jad/mc/redefine` 一条龙来线上热更新代码，非常强大，但也很危险，需要做好权限管理，操作不规范，同事两行泪 :sob: 。
 
