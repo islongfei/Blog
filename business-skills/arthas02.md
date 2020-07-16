@@ -15,7 +15,7 @@
 ```java 
 LOGGER.keyword("findGoodsTypeOnMain").info("arthas test success");
 ``` 
-修改完将.java文件上传至服务器，用于之后的反编译热替换。也可将本地 IEDA target 下编译好的.class文件上传服务器。
+修改完将.java文件上传至服务器，用于之后的编译和热替换。也可将本地 IEDA target 下编译好的.class文件上传服务器。
 
 ### 二、编译代码
 1. 先使用`sc`命令查找出修改类所对应的 classLoader 的 hash 值，命令如下：  
