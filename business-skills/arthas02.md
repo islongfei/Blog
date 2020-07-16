@@ -7,8 +7,12 @@
 
 ### 一、修改代码 
 * 直接在服务器上修改：可以将要修改的类的.class文件通过 `jad`命令反编译生成.java文件，再用文本编辑器进行修改。
-命令如下`jad --source-only com.xxx.BasGoodsTypeServiceImpl > /xxx/redefine-test/BasGoodsTypeServiceImpl.java`
+命令如下  `jad --source-only com.xxx.BasGoodsTypeServiceImpl > /xxx/redefine-test/BasGoodsTypeServiceImpl.java`
 * 也可以在本地编辑器直接修改代码，这样也更加稳妥。
 
 ### 二、编译代码
-* 服务器
+1. 先使用`sc`命令查找出修改类所对应的classLoader，命令如下：  
+``` sc -d *BasGoodsTypeServiceImpl | grep classLoaderHash  
+ classLoaderHash   6f2b958e
+ ```
+
