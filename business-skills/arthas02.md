@@ -12,7 +12,8 @@
 
 ### 二、编译代码
 1. 先使用`sc`命令查找出修改类所对应的classLoader，命令如下：  
-``` sc -d *BasGoodsTypeServiceImpl | grep classLoaderHash  
+```linux
+sc -d *BasGoodsTypeServiceImpl | grep classLoaderHash  
  classLoaderHash   6f2b958e
  ```
 
