@@ -9,13 +9,13 @@
 * 直接在服务器上修改：可以将要修改的类的.class文件通过 `jad`命令反编译生成.java文件，再用文本编辑器进行修改。  
 命令如下：  
 `jad --source-only com.xxx.BasGoodsTypeServiceImpl > /xxx/redefine-test/BasGoodsTypeServiceImpl.java`
-* 也可以在本地编辑器直接修改代码，这样也更加稳妥。  
+* 也可以在本地 IEDA 直接修改代码，这样也更加稳妥。  
 
 比如现在要修改 BasGoodsTypeServiceImpl 这个类的代码，在代码中加一行日志如下：  
 ```java 
 LOGGER.keyword("findGoodsTypeOnMain").info("arthas test success");
 ``` 
-修改完将.java文件上传至服务器，用于之后的反编译热替换。也可将本地编辑器target下编译好的.class文件上传服务器。
+修改完将.java文件上传至服务器，用于之后的反编译热替换。也可将本地 IEDA target 下编译好的.class文件上传服务器。
 
 ### 二、编译代码
 1. 先使用`sc`命令查找出修改类所对应的 classLoader 的 hash 值，命令如下：  
