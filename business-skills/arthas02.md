@@ -3,7 +3,7 @@
 * 线上排查问题，找到修复思路了，但应用重启之后环境现场就变了，问题难以复现。  
 * 本地开发时，怀疑某个框架有bug，要去修改验证。如果自己编译开源框架再发布，耗时会非常长，还不一定能编译成功。 
 
-面对这样的痛点借助 arthas 的 `jad/mc/redefine` 命令，不用重启就直接可以实现代码热更新。
+**面对这样的痛点借助 arthas 的 `jad/mc/redefine` 命令，不用重启就直接可以实现代码热更新。**
 
 ### 一、修改代码 
 * 直接在服务器上修改：可以将要修改的类的.class文件通过 `jad`命令反编译生成.java文件，再用文本编辑器进行修改。
@@ -35,7 +35,8 @@ mc -c 6f2b958e /home/work/spring-boot/arthas-output/redefine-test/BasGoodsTypeSe
 redefine /home/work/spring-boot/starter/com/pagoda/basedata/service/goods/BasGoodsTypeServiceImpl.class
 ```
 过程如下，可以看到已经更新成功了。  
-![image](https://github.com/islongfei/Blog/blob/master/images/arthas01.png)  
+![image](https://github.com/islongfei/Blog/blob/master/images/arthas01.png)     
+
 由于项目用的的日志系统为 elk ,在调用对应接口后，直接在 kibina 上查找日志，看加上的日志是否热加载成功。如图，日志成功打印出来，在没有重启服务的情况下实现代码修改热加载。  
 ![image](https://github.com/islongfei/Blog/blob/master/images/arthas02.png)   
 
