@@ -6,8 +6,9 @@
 **面对这样的痛点借助 arthas 的 `jad/mc/redefine` 命令，不用重启就直接可以实现代码热更新，非常方便。**
 
 ### 一、修改代码 
-* 直接在服务器上修改：可以将要修改的类的.class文件通过 `jad`命令反编译生成.java文件，再用文本编辑器进行修改。
-命令如下  `jad --source-only com.xxx.BasGoodsTypeServiceImpl > /xxx/redefine-test/BasGoodsTypeServiceImpl.java`
+* 直接在服务器上修改：可以将要修改的类的.class文件通过 `jad`命令反编译生成.java文件，再用文本编辑器进行修改。  
+命令如下：  
+`jad --source-only com.xxx.BasGoodsTypeServiceImpl > /xxx/redefine-test/BasGoodsTypeServiceImpl.java`
 * 也可以在本地编辑器直接修改代码，这样也更加稳妥。  
 
 比如现在要修改 BasGoodsTypeServiceImpl 这个类的代码，在代码中加一行日志如下：  
