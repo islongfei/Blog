@@ -1,3 +1,4 @@
 * [如何保证 RocketMQ 不丢失消息](https://mp.weixin.qq.com/s/u42IkYDF_pH1OkzrJ8CGoQ)
 * [redis 9 种数据结构详解](https://mp.weixin.qq.com/s/J9XWe3VIG6NUCIvXj660fw)
 * [图解 KMP 算法](https://mp.weixin.qq.com/s/Par5rNK-EaEaOQx3x7kW-g)
+* [AQS的原理及应用](https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html)
