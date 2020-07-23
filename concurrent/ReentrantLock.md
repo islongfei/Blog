@@ -7,7 +7,7 @@
         private static final long serialVersionUID = 7316153563782823691L;
 
         /**
-         * 先cas获取锁，获取失败则需要加入到等待队列中(acquire)
+         * 先cas获取锁，获取失败则需要加入到等待队列中
          */
         final void lock() {
             if (compareAndSetState(0, 1))
