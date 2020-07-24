@@ -50,5 +50,10 @@
 * [热更新代码一条龙](https://github.com/islongfei/Blog/blob/master/business-skills/arthas02.md)  
 
 * 查看当前系统实时数据面板(线程、内存、版本等)  
-`dashboard`
+`dashboard`  
 
+* 查看系统属性（包括一些配置的属性）  
+`sysprop`  
+
+* 查看JVM诊断参数的开启情况  
+`vmoption`
