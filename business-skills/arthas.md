@@ -47,4 +47,7 @@
 * 反编译指定类,会有classLoader信息  
 `jad java.lang.String`
 
-* redefine 动态替换内存中class，热部署，限制条件：只能改方法实现（方法运行完成后才会生效），不能改方法名， 不能改属性
+* redefine 动态替换内存中class，热部署，限制条件：只能改方法实现（方法运行完成后才会生效），不能改方法名， 不能改属性  
+
+* [热更新代码一条龙](https://github.com/islongfei/Blog/blob/master/business-skills/arthas02.md)
+
