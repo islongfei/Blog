@@ -1,4 +1,4 @@
-每次new DirectByteBuffer()都会执行 `Bits.reserveMemory(size, cap);`方法去申请内存。  
+具体jdk源码位置为：`java.nio.DirectByteBuffer#DirectByteBuffer(int)`,每次new DirectByteBuffer()都会执行 `Bits.reserveMemory(size, cap);`方法去申请内存。  
 >通过-XX:MaxDirectMemorySize参数可以设置 DirectMemory 的最大空间
 
 ```java 
