@@ -1,4 +1,5 @@
-每次new DirectByteBuffer()都会执行 `Bits.reserveMemory(size, cap);`方法去申请内存
+每次new DirectByteBuffer()都会执行 `Bits.reserveMemory(size, cap);`方法去申请内存。  
+>通过-XX:MaxDirectMemorySize参数可以设置 DirectMemory 的最大空间
 
 ```java 
     static void reserveMemory(long size, int cap) {
