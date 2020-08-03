@@ -3,3 +3,4 @@
 * [图解 KMP 算法](https://mp.weixin.qq.com/s/Par5rNK-EaEaOQx3x7kW-g)
 * [AQS的原理及应用](https://tech.meituan.com/2019/12/05/aqs-theory-and-apply.html)
 * [intanceof 实现原理](https://www.zhihu.com/question/21574535/answer/18998914)
+* [rocketMq 消息幂等通用解决方案](https://mp.weixin.qq.com/s?__biz=MzIxODM2NTQ3OQ==&mid=2247484657&idx=1&sn=b03880985aaa7aaa8a3775234bd7d449&chksm=97eaefb9a09d66af50362114a7c4024f22163edf35e12c817c262826814e0ae2b477d9ef713d&mpshare=1&scene=24&srcid=0730zRnToiLtvmfRcTaa56M6&sharer_sharetime=1596111475948&sharer_shareid=c73eabdcca096a5ef59312ef3f880c72#rd)
