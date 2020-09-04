@@ -94,4 +94,3 @@
 ## 其他
 * [CSDN 老博客](https://blog.csdn.net/qq_37480159)
 * [emoji](https://github.com/islongfei/Blog/blob/master/emoji/emoji.md)
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=islongfei&repo=github-readme-stats)](https://github.com/islongfei/github-readme-stats)
