@@ -92,5 +92,5 @@
 
 
 ## 其他
-* [CSDN 老博客](https://blog.csdn.net/qq_37480159)
+* [CSDN 个人博客](https://blog.csdn.net/qq_37480159)
 * [emoji](https://github.com/islongfei/Blog/blob/master/emoji/emoji.md)
