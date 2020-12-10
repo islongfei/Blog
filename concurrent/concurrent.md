@@ -47,6 +47,18 @@ unsafe可以直接操作jvm中的内存，操作内存中的类或实例的变�
 * 按照线程的执行阶段去进行操作
 ### ReadWriteLock
 * 共享锁和排他锁：读锁为共享锁，写锁为排他锁。正在读时不允许写锁进入，可以多个线程一起读。
+### LockSupport  
+* LookSupport.pack();线程红灯停车
+* LookSupport.unpack(); 绿灯开车
+### 阅读源码 
+* 理解别人的思路 ，理解设计模式
+* 跑不起来不读，读动态代码，不读动态代码
+### AQS  
+* Template Method 
+* Callback Function
+* 父类默认实现，子类具体实现
+* CLH ：双向列表，每个node里面装线程
+* volatile 修饰 state，stata根据子类的不同实例代表不同的意义，state为几，代表，cas去修改state
 
 
 
